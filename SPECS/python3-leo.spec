@@ -1,7 +1,7 @@
 %define __python /usr/bin/python2.7
 
 Name:           python-leo
-Version:        1.1.1
+Version:        1.1.2
 Release:        1%{?dist}
 Summary:        Python library for leo dict
 License:        Apache
