@@ -2,7 +2,7 @@
 
 Name:           python-leo
 Version:        1.1.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Python library for leo dict
 License:        Apache
 
