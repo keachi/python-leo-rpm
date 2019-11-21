@@ -1,6 +1,6 @@
-%define __python /usr/bin/python3
+%global srcname leo
 
-Name:           python-leo
+Name:           python-%{srcname}
 Version:        1.1.3
 Release:        2%{?dist}
 Summary:        Python library for leo dict
@@ -18,21 +18,21 @@ Requires:       python3-lxml python3-beautifulsoup4
 Python library for leo dict.
 
 %prep
-%setup -q -n %{name}-%{version}
+%autosetup -n %{srcname}-%{version}
 
 %build
-%{__python} setup.py build
+%py3_build
 
 %install
 rm -rf %{buildroot}
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
+%py3_install
 
 %clean
 rm -rf %{buildroot}
 
-%files
+%files -n python-%{srcname}
 %license LICENSE.txt
-#%doc README.md
-%{python_sitelib}/*
-%{_prefix}/bin/leo
-%{_prefix}/bin/train
+%{python3_sitelib}/%{srcname}-*.egg-info/
+%{python3_sitelib}/%{srcname}/
+%{_bindir}/leo
+%{_bindir}/train
