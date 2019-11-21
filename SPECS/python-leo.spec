@@ -18,7 +18,7 @@ Requires:       python3-lxml python3-beautifulsoup4
 Python library for leo dict.
 
 %prep
-%autosetup -n %{srcname}-%{version}
+%autosetup -n python-%{srcname}-%{version}
 
 %build
 %py3_build
