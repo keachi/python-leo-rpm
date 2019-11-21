@@ -1,8 +1,8 @@
-%define __python /usr/bin/python2.7
+%define __python /usr/bin/python3
 
 Name:           python-leo
 Version:        1.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python library for leo dict
 License:        Apache
 
@@ -12,7 +12,7 @@ BuildArch:      noarch
 BuildRequires:  python python-setuptools
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
-Requires:       python2-lxml python-beautifulsoup4
+Requires:       python3-lxml python3-beautifulsoup4
 
 %description
 Python library for leo dict.
